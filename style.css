@@ -219,7 +219,8 @@ nav {
 }
 
 .button-project,
-.button-contact {
+.button-instagram,
+.button-github {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -248,7 +249,7 @@ nav {
   transform: translate(-2px, -2px);
 }
 
-.button-contact {
+.button-instagram {
   background-color: #ff3333;
   color: #ffffff;
   border: 2px solid;
@@ -256,12 +257,26 @@ nav {
   box-shadow: 7px 6px #ff3333;
 }
 
-.button-contact:hover {
+.button-instagram:hover {
   cursor: pointer;
   background-color: #ffffff;
   color: #000000;
   border-color: #010101;
-  box-shadow: 4px 4px #ff3333;
+  transform: translate(-2px, -2px);
+}
+.button-github {
+  background-color: #181818;
+  color: #ffe600;
+  border: 2px solid;
+  border-color: #ffe600;
+  box-shadow: 7px 6px #ffe600;
+}
+
+.button-github:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #010101;
   transform: translate(-2px, -2px);
 }
 
@@ -386,10 +401,10 @@ nav {
   flex-direction: column;
   gap: 14px;
   background-color: #0a0a0a;
-  border: 4px solid #f4d03f;
+  border: 4px solid #ffe600;
   padding: 18px;
-  font-family: "Courier New", "Consolas", monospace;
-  box-shadow: 8px 8px 0 #f4d03f;
+  font-family: "JetBrains Mono", monospace;
+  box-shadow: 8px 8px 0 #ffe600;
   transition:
     transform 0.15s,
     box-shadow 0.15s,
@@ -398,8 +413,8 @@ nav {
 
 .case-card:hover {
   transform: translate(-4px, -4px);
-  border-color: #ffd700;
-  box-shadow: 12px 12px 0 #f4d03f;
+  border-color: #ffe600;
+  box-shadow: 12px 12px 0 #ffe600;
 }
 
 .case-top {
@@ -412,8 +427,8 @@ nav {
 
 .case-badge {
   color: #0a0a0a;
-  background-color: #f4d03f;
-  border: 2px solid #f4d03f;
+  background-color: #ffe600;
+  border: 2px solid #ffe600;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -423,7 +438,7 @@ nav {
 .case-card.is-active .case-badge {
   color: #ffffff;
   background-color: #ff3333;
-  border-color: #ff3333;
+  border-color: #ffffff;
 }
 
 .case-status {
@@ -436,7 +451,7 @@ nav {
 .case-title {
   width: 100%;
   color: #ffffff;
-  font-family: "Courier New", "Consolas", monospace;
+  font-family: "JetBrains Mono", monospace;
   font-size: clamp(1.05rem, 1.8vw, 1.35rem);
   font-weight: 700;
   line-height: 1.2;
@@ -447,28 +462,28 @@ nav {
 
 .case-desc {
   color: #b8b8b8;
-  font-family: "Courier New", "Consolas", monospace;
+  font-family: "space grotesk", monospace;
   font-size: 0.78rem;
   line-height: 1.6;
 }
 
 .case-code {
   background-color: #000000;
-  border: 2px solid #f4d03f;
+  border: 2px solid #ffe600;
   padding: 10px 12px;
   overflow-x: auto;
 }
 
 .case-code code {
-  color: #4ade80;
-  font-family: "Courier New", "Consolas", monospace;
+  color: #00ff66;
+  font-family: "JetBrains Mono", monospace;
   font-size: 0.72rem;
   line-height: 1.7;
   white-space: pre;
 }
 
 .case-code .s {
-  color: #f4d03f;
+  color: #ffe600;
 }
 
 .case-code .p {
@@ -486,8 +501,8 @@ nav {
 }
 
 .case-tag {
-  color: #f4d03f;
-  border: 2px solid #f4d03f;
+  color: #ffe600;
+  border: 2px solid #ffe600;
   font-family: "Courier New", "Consolas", monospace;
   font-size: 0.62rem;
   letter-spacing: 1px;
@@ -498,10 +513,10 @@ nav {
   display: block;
   margin-top: auto;
   color: #0a0a0a;
-  background-color: #f4d03f;
+  background-color: #ffe600;
   border: 3px solid #0a0a0a;
-  box-shadow: 5px 5px 0 #ff3333;
-  font-family: "Courier New", "Consolas", monospace;
+  box-shadow: 5px 5px 0 #ffe600;
+  font-family: "jetBrains Mono", monospace;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -513,9 +528,34 @@ nav {
 
 .case-btn:hover {
   cursor: pointer;
-  background-color: #ffd700;
+  background-color: #ffe600;
   transform: translate(-2px, -2px);
   box-shadow: 8px 8px 0 #ff3333;
+}
+
+.section-thanks {
+  width: 100%;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 6px solid #ffe600;
+  padding: clamp(48px, 9vw, 100px) clamp(16px, 5vw, 80px);
+  scroll-margin-top: 60px;
+}
+
+.thanks-title {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  color: #ffe600;
+  font-family: "Space Grotesk", monospace;
+  font-size: clamp(2.4rem, 12vw, 9.5rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 @supports (animation-timeline: view()) {
