@@ -14,7 +14,7 @@
     <nav>
       <ul class="nav-menu">
         <li><a href="index.html">HOME</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
         <li><a href="skill.html">SKILL</a></li>
       </ul>
       <div class="nav-right">
@@ -50,7 +50,7 @@
           </p>
         </div>
         <div class="button">
-          <a class="button-project" href="projects.html">📁 PROJECTS</a>
+          <a class="button-project" href="#projects">📁 PROJECTS</a>
           <a class="button-contact" href="contact.html">⚡️ CONTACT</a>
         </div>
       </div>
@@ -71,5 +71,94 @@
         </div>
       </aside>
     </div>
+    <section class="section-projects" id="projects">
+      <div class="section-header reveal">
+        <h3>PROJECTS</h3>
+        <h2>STUFF I HAVE BUILT</h2>
+      </div>
+      <div class="project-grid">
+        <article class="case-card is-active reveal">
+          <div class="case-top">
+            <span class="case-badge">CASE #001</span>
+            <span class="case-status">ACTIVE</span>
+          </div>
+          <h3 class="case-title">NETFLIX-UI</h3>
+          <p class="case-desc">
+            Tampilan UI untuk Netflix, dibangun dengan HTML dan CSS.
+          </p>
+          <div class="case-code">
+            <pre><code><span class="c">/* banner + hero */</span>
+<span class="s">.row</span> {
+  <span class="p">display</span>: grid;
+  <span class="p">gap</span>: 12px;
+}</code></pre>
+          </div>
+          <div class="case-tags">
+            <span class="case-tag">HTML5</span>
+            <span class="case-tag">CSS GRID</span>
+            <span class="case-tag">RESPONSIVE</span>
+          </div>
+          <a
+            class="case-btn"
+            href="https://github.com/fren-oss/Netflix-ui.git"
+            >INSPEKSI FILE</a
+          >
+        </article>
+        <article class="case-card reveal">
+          <div class="case-top">
+            <span class="case-badge">CASE #002</span>
+            <span class="case-status">DEPLOYED</span>
+          </div>
+          <h3 class="case-title">PRODUCT CARD</h3>
+          <p class="case-desc">
+            Tampilan UI untuk produk vape, dibangun dengan HTML dan CSS.
+          </p>
+          <div class="case-code">
+            <pre><code><span class="c">/* neo-brutalist */</span>
+<span class="s">.card</span> {
+  <span class="p">border</span>: 3px solid #f4d03f;
+  <span class="p">box-shadow</span>: 6px 6px 0;
+}</code></pre>
+          </div>
+          <div class="case-tags">
+            <span class="case-tag">HTML5</span>
+            <span class="case-tag">UI/UX</span>
+            <span class="case-tag">BRUTALISM</span>
+          </div>
+          <a
+            class="case-btn"
+            href="https://github.com/fren-oss/product-card.git"
+            >INSPEKSI FILE</a
+          >
+        </article>
+        <article class="case-card reveal">
+          <div class="case-top">
+            <span class="case-badge">CASE #003</span>
+            <span class="case-status">ARCHIVED</span>
+          </div>
+          <h3 class="case-title">MUSIC PLAYER</h3>
+          <p class="case-desc">
+            Music player memakai HTML, CSS, dan JavaScript.
+          </p>
+          <div class="case-code">
+            <pre><code><span class="c">/* audio deck */</span>
+<span class="s">audio</span> {
+  <span class="p">width</span>: 100%;
+  <span class="p">outline</span>: 2px solid #f4d03f;
+}</code></pre>
+          </div>
+          <div class="case-tags">
+            <span class="case-tag">HTML5</span>
+            <span class="case-tag">JAVASCRIPT</span>
+            <span class="case-tag">AUDIO API</span>
+          </div>
+          <a
+            class="case-btn"
+            href="https://github.com/fren-oss/music.git"
+            >INSPEKSI FILE</a
+          >
+        </article>
+      </div>
+    </section>
   </body>
 </html>
