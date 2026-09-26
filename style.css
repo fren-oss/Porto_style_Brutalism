@@ -1,0 +1,427 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Space+Grotesk:wght@300..700&display=swap");
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background: #ffe600;
+  color: #000000;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000000;
+  top: 0;
+  position: fixed;
+  box-shadow: 0px 4px rgb(255, 230, 0);
+  z-index: 10;
+  padding: 0 clamp(10px, 3vw, 30px);
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(9px, 1.2vw, 12px);
+  font-weight: bold;
+}
+
+.nav-menu li {
+  margin-left: clamp(10px, 3vw, 50px);
+}
+
+.nav-menu li a {
+  text-decoration: none;
+  color: #ffffff;
+  transition: 0.1s;
+}
+
+.nav-menu li a:hover {
+  color: #ffe600;
+  border-color: #ffe600;
+  cursor: pointer;
+  background-color: #1f1f1f;
+  border: 2px solid;
+  padding: 2px 10px;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: clamp(0px, 1.5vw, 20px);
+}
+
+.github {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(34px, 4vw, 50px);
+  height: clamp(34px, 4vw, 50px);
+  border-radius: 50%;
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: rgb(255, 230, 0);
+  text-decoration: none;
+}
+
+.github:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(34px, 4vw, 50px);
+  height: clamp(34px, 4vw, 50px);
+  border-radius: 50%;
+  font-size: clamp(22px, 2.6vw, 30px);
+  color: rgb(255, 230, 0);
+  text-decoration: none;
+}
+
+.instagram:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 0.2s;
+}
+
+.container-card {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: clamp(20px, 4vw, 50px);
+  margin-top: 60px;
+  padding: 0 clamp(16px, 5vw, 80px) 40px;
+  color: #ffffff;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(12px, 2vw, 20px);
+  flex: 1 1 auto;
+  min-width: 0;
+  max-width: 700px;
+}
+
+.card-header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  text-align: left;
+}
+
+.card-header h2 {
+  display: flex;
+  width: auto;
+  max-width: 100%;
+  height: auto;
+  padding: 8px 16px;
+  background-color: #ff3333;
+  text-transform: uppercase;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(10px, 1.6vw, 16px);
+  font-weight: 1000;
+  border: 2px solid;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card-header h1 {
+  width: 100%;
+  max-width: 700px;
+  text-transform: uppercase;
+  font-family: "Space Grotesk", monospace;
+  font-size: clamp(28px, 7.5vw, 70px);
+  font-weight: 700;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.card-header h3 {
+  width: 100%;
+  max-width: 700px;
+  text-transform: uppercase;
+  font-family: "Space Grotesk", monospace;
+  font-size: clamp(28px, 7.5vw, 70px);
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  text-align: left;
+  margin-top: 0px;
+  background-color: #ffe600;
+  border: 5px solid;
+  border-color: #010101;
+  color: #000000;
+  box-shadow: 8px 8px #ff3333;
+}
+
+.card-body {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #181818;
+  color: #ffe600;
+  border-left: 6px solid;
+  border-top: 0px solid;
+  border-right: 0px solid;
+  border-bottom: 2px;
+  padding: 16px 20px;
+}
+
+.card-body p {
+  color: #a0a0a0;
+  font-family: "jetBrains Mono", monospace;
+  text-align: left;
+  font-size: clamp(0.7rem, 1.4vw, 0.9rem);
+  line-height: 1.6;
+}
+
+.button {
+  width: 100%;
+  max-width: 700px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: clamp(12px, 2.5vw, 24px);
+}
+
+.button-project,
+.button-contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(10px, 1.6vw, 16px);
+  font-weight: 700;
+  text-decoration: none;
+  padding: clamp(10px, 1.6vw, 16px) clamp(20px, 4vw, 40px);
+  border: 3px solid;
+  border-color: #010101;
+  transition: 0.15s;
+}
+
+.button-project {
+  background-color: #ffe600;
+  color: #000000;
+  box-shadow: 7px 6px #ffe600;
+}
+
+.button-project:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #000000;
+  transform: translate(-2px, -2px);
+}
+
+.button-contact {
+  background-color: #ff3333;
+  color: #ffffff;
+  border: 2px solid;
+  border-color: #ffffff;
+  box-shadow: 7px 6px #ff3333;
+}
+
+.button-contact:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #000000;
+  border-color: #010101;
+  box-shadow: 4px 4px #ff3333;
+  transform: translate(-2px, -2px);
+}
+
+.container-profile {
+  flex: 0 0 auto;
+  width: 90%;
+  max-width: 480px;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(14px, 1.8vw, 20px);
+  background-color: #181818;
+  border: 6px solid #ffe600;
+  padding: 18px 20px;
+  position: sticky;
+  top: 100px;
+  box-shadow: 10px 10px 0px rgb(255, 230, 0);
+}
+
+.profile-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #2e2e2e;
+}
+
+.profile-header h3 {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  color: #ffe600;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(10px, 1.2vw, 13px);
+  letter-spacing: 1px;
+  border: 2px solid;
+  padding: 5px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-header h2 {
+  color: #ffe600;
+  font-family: "Space Grotesk", monospace;
+  font-size: clamp(17px, 2.2vw, 26px);
+  font-weight: 700;
+  line-height: 1.2;
+  margin-top: 10px;
+}
+
+.profile-body {
+  color: #a0a0a0;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.7rem, 1.1vw, 0.8rem);
+  line-height: 1.9;
+}
+
+.bar-bawah {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding-top: 14px;
+  border-top: 3px solid #ffe600;
+  color: #ffffff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: clamp(0.65rem, 1vw, 0.75rem);
+  letter-spacing: 1px;
+}
+
+@media (max-width: 1000px) {
+  .container-card {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: clamp(24px, 5vw, 40px);
+  }
+
+  .card-content,
+  .container-profile {
+    max-width: 700px;
+  }
+
+  .container-profile {
+    position: static;
+    order: -1;
+    width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 0 12px;
+  }
+
+  .nav-menu li {
+    margin-left: 10px;
+  }
+
+  .nav-menu li a {
+    letter-spacing: 0;
+    font-size: 9px;
+  }
+
+  .nav-right {
+    gap: 2px;
+    margin-right: 0;
+  }
+
+  .container-card {
+    justify-content: flex-start;
+    gap: 20px;
+    padding: 0 16px 32px;
+  }
+
+  .card-content,
+  .container-profile {
+    max-width: 100%;
+  }
+
+  .container-profile {
+    width: 100%;
+    gap: 12px;
+    padding: 14px 16px;
+    border-width: 4px;
+    box-shadow: 6px 6px 0 rgb(255, 230, 0);
+  }
+
+  .profile-header h2 {
+    font-size: 19px;
+    margin-top: 2px;
+  }
+
+  .profile-body {
+    font-size: 0.72rem;
+    line-height: 1.7;
+  }
+
+  .bar-bawah {
+    flex-wrap: wrap;
+    font-size: 0.65rem;
+  }
+
+  .card-header h1,
+  .card-header h3 {
+    font-size: clamp(24px, 7.4vw, 32px);
+    overflow-wrap: break-word;
+  }
+
+  .card-header h3 {
+    box-shadow: 5px 5px #ff3333;
+  }
+
+  .card-body {
+    padding: 14px 16px;
+  }
+
+  .button {
+    gap: 10px;
+  }
+
+  .button-project,
+  .button-contact {
+    flex: 1 1 100%;
+    padding: 12px 16px;
+  }
+}
