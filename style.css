@@ -221,6 +221,8 @@ nav {
 .button-project,
 .button-instagram,
 .button-github {
+  flex: 1 1 clamp(120px, 16%, 190px);
+  min-width: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -229,7 +231,7 @@ nav {
   font-size: clamp(10px, 1.6vw, 16px);
   font-weight: 700;
   text-decoration: none;
-  padding: clamp(10px, 1.6vw, 16px) clamp(20px, 4vw, 40px);
+  padding: clamp(12px, 1.6vw, 16px) clamp(12px, 2.5vw, 28px);
   border: 3px solid;
   border-color: #010101;
   transition: 0.15s;
@@ -680,8 +682,10 @@ nav {
   }
 
   .button-project,
-  .button-contact {
+  .button-instagram,
+  .button-github {
     flex: 1 1 100%;
     padding: 12px 16px;
+    font-size: 12px;
   }
 }
